@@ -1,0 +1,165 @@
+game_id;title;genre_id;genres
+1;Until Dawn;1;survival horror
+1;Until Dawn;7;interactive film
+1;Until Dawn;9;przygodowa
+1;Until Dawn;10;akcja
+2;Resident Evil VII: Biohazard;1;survival horror
+2;Resident Evil VII: Biohazard;9;przygodowa
+2;Resident Evil VII: Biohazard;10;akcja
+2;Resident Evil VII: Biohazard;11;strzelanka
+3;The Last of Us;14;postapokalipsa
+3;The Last of Us;13;skradanka
+3;The Last of Us;11;strzelanka
+3;The Last of Us;9;przygodowa
+3;The Last of Us;8;fabularna
+3;The Last of Us;5;dramat
+3;The Last of Us;1;survival horror
+4;Detroit: Become Human;9;przygodowa
+4;Detroit: Become Human;10;akcja
+4;Detroit: Become Human;7;interactive film
+5;Outlast;1;survival horror
+5;Outlast;9;przygodowa
+5;Outlast;10;akcja
+5;Outlast;13;skradanka
+5;Outlast;3;gore
+6;Outlast: Whistleblower;1;survival horror
+6;Outlast: Whistleblower;9;przygodowa
+6;Outlast: Whistleblower;10;akcja
+6;Outlast: Whistleblower;3;gore
+7;Outlast 2;1;survival horror
+7;Outlast 2;9;przygodowa
+7;Outlast 2;10;akcja
+7;Outlast 2;3;gore
+8;Silent Hill: Homecoming;1;survival horror
+8;Silent Hill: Homecoming;9;przygodowa
+8;Silent Hill: Homecoming;12;bijatyka
+8;Silent Hill: Homecoming;11;strzelanka
+9;Silent Hill: Downpour;1;survival horror
+9;Silent Hill: Downpour;9;przygodowa
+9;Silent Hill: Downpour;12;bijatyka
+9;Silent Hill: Downpour;11;strzelanka
+10;Silent Hill 4: The Room;1;survival horror
+10;Silent Hill 4: The Room;9;przygodowa
+10;Silent Hill 4: The Room;12;bijatyka
+10;Silent Hill 4: The Room;11;strzelanka
+11;Silent Hill 3;1;survival horror
+11;Silent Hill 3;9;przygodowa
+11;Silent Hill 3;10;akcja
+12;Silent Hill 2 (2001);1;survival horror
+12;Silent Hill 2 (2001);9;przygodowa
+12;Silent Hill 2 (2001);10;akcja
+13;Silent Hill: Shattered Memories;1;survival horror
+13;Silent Hill: Shattered Memories;9;przygodowa
+13;Silent Hill: Shattered Memories;10;akcja
+14;Resident Evil Vilage;1;survival horror
+14;Resident Evil Vilage;11; strzelanka
+14;Resident Evil Vilage;10;akcja
+15;Resident Evil 2;1;survival horror
+15;Resident Evil 2;11;strzelanka
+15;Resident Evil 2;10;akcja
+15;Resident Evil 2;12;bijatyka
+16;Resident Evil 3;1;survival horror
+16;Resident Evil 3;11;strzelanka
+16;Resident Evil 3;10;akcja
+16;Resident Evil 3;12;bijatyka
+16;Resident Evil 3;9;przygodowa
+17;The Medium;2;horror
+17;The Medium;9;przygodowa
+17;The Medium;16; logiczna
+18;The Last of Us: Part II;14;postapokalipsa
+18;The Last of Us: Part II;13;skradanka
+18;The Last of Us: Part II;11;strzelanka
+18;The Last of Us: Part II;9;przygodowa
+18;The Last of Us: Part II;8;fabularna
+18;The Last of Us: Part II;5;dramat
+18;The Last of Us: Part II;1;survival horror
+19;Call of Duty: WWII;11;strzelanka
+19;Call of Duty: WWII;10;akcja
+20;Wolfenstein: The New Order;11;strzelanka
+20;Wolfenstein: The New Order;9;przygodowa
+20;Wolfenstein: The New Order;10;akcja
+21;Wolfenstein II: The New Colossus;11;strzelanka
+21;Wolfenstein II: The New Colossus;9;przygodowa
+21;Wolfenstein II: The New Colossus;10;akcja
+22;Martha Is Dead;2;horror
+22;Martha Is Dead;4;thriller
+22;Martha Is Dead;3;gore
+22;Martha Is Dead;6;psychologiczna
+22;Martha Is Dead;5;dramat
+23;Amnesia: Rebirth;1;survival horror
+23;Amnesia: Rebirth;9;przygodowa
+23;Amnesia: Rebirth;16;logiczna
+24;Alan Wake Remastered;1;survival horror
+24;Alan Wake Remastered;11;strzelanka
+24;Alan Wake Remastered;9;przygodowa
+24;Alan Wake Remastered;10;akcja
+25;The Quarry;1;survival horror
+25;The Quarry;7;interactive film
+25;The Quarry;9;przygodowa
+25;The Quarry;10;akcja
+26;The Dark Pictures: Man of Medan;1;survival horror
+26;The Dark Pictures: Man of Medan;7;interactive film
+26;The Dark Pictures: Man of Medan;9;przygodowa
+27;The Dark Pictures: Little Hope;1;survival horror
+27;The Dark Pictures: Little Hope;7;interactive film
+27;The Dark Pictures: Little Hope;9;przygodowa
+28;The Dark Pictures: House of Ashes;1;survival horror
+28;The Dark Pictures: House of Ashes;7;interactive film
+28;The Dark Pictures: House of Ashes;9;przygodowa
+28;The Dark Pictures: House of Ashes;10;akcja
+28;The Dark Pictures: House of Ashes;5;dramat
+29;The Dark Pictures: The Devil in Me;1;survival horror
+29;The Dark Pictures: The Devil in Me;7;interactive film
+29;The Dark Pictures: The Devil in Me;3;gore
+29;The Dark Pictures: The Devil in Me;9;przygodowa
+30;Little Nightmares;1;survival horror
+30;Little Nightmares;17;platformowa
+30;Little Nightmares;9;przygodowa
+31;Little Nightmares II;1;survival horror
+31;Little Nightmares II;17;platformowa
+31;Little Nightmares II;9;przygodowa
+32;Layers of Fear: Legacy;2;horror
+32;Layers of Fear: Legacy;6;psychologiczna
+32;Layers of Fear: Legacy;9;przygodowa
+33;The Suicide of Rachel Foster;4;thriller
+33;The Suicide of Rachel Foster;9;przygodowa
+33;The Suicide of Rachel Foster;5;dramat
+34;Cyberpunk 2077;10;akcja
+34;Cyberpunk 2077;18;sciencie fiction
+34;Cyberpunk 2077;11;strzelanka
+34;Cyberpunk 2077;12;bijatyka
+34;Cyberpunk 2077;9;przygodowa
+35;Assassin's Creed: Valhalla;10;akcja
+35;Assassin's Creed: Valhalla;9;przygodowa
+36;Wiedümin 3: Dziki Gon;8;fabularna
+36;Wiedümin 3: Dziki Gon;9;przygodowa
+36;Wiedümin 3: Dziki Gon;10;akcja
+37;Diablo II: Resurrected;19;hack and slash
+38;Counter-Strike: Global Offensive;10;akcja
+38;Counter-Strike: Global Offensive;11;strzelanka
+39;The Elder Scrolls V: Skyrim;8;fabularna
+40;God of War;9;przygodowa
+40;God of War;19;hack and slash
+40;God of War;8;fabularna
+41;Grand Theft Auto: San Andreas;10;akcja
+41;Grand Theft Auto: San Andreas;11;strzelanka
+41;Grand Theft Auto: San Andreas;9;przygodowa
+42;Dying Light;1;survival horror 
+42;Dying Light;10;akcja
+42;Dying Light;8;fabularna
+42;Dying Light;9;przygodowa
+43;Divinity: Original Sin II - Definitive Edition ;9;przygodowa
+43;Divinity: Original Sin II - Definitive Edition ;10;akcja
+43;Divinity: Original Sin II - Definitive Edition ;15;strategiczna
+44;Divinity: Original Sin - Enhanced Edition;8;fabularna
+44;Divinity: Original Sin - Enhanced Edition;9;przygodowa
+44;Divinity: Original Sin - Enhanced Edition;10;akcja
+44;Divinity: Original Sin - Enhanced Edition;15;strategiczna
+45;Baldur's Gate 3;8;fabularna
+45;Baldur's Gate 3;9;przygodowa
+45;Baldur's Gate 3;15;strategiczna
+45;Baldur's Gate 3;20;RPG
+46;Hellblade: Senua's Sacrifice;9;przygodowa
+46;Hellblade: Senua's Sacrifice;10;akcja
+46;Hellblade: Senua's Sacrifice;5;dramat
+46;Hellblade: Senua's Sacrifice;16;logiczna

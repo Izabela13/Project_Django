@@ -1,0 +1,48 @@
+body {
+    min-height: 100%;
+    margin: 0
+}
+
+
+.page {
+    background-color: black;
+    color: white;
+}
+
+
+.menu_row {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 0;
+    background-color: grey;
+    border: ridge;
+}
+
+
+.container {}
+
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 10%;
+    background-color: grey;
+    border: ridge;
+}
+
+
+.content {
+    display: flex;
+    flex-flow: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.general_displayed {
+    margin: 0 auto;
+}

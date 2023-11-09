@@ -1,0 +1,11 @@
+img.displayed {
+    flex-flow: column;
+    flex-direction: row;
+}
+
+.displayed {
+    display: inline-flex;
+    justify-items: center;
+    flex-flow: row;
+    flex-direction: row;
+}
