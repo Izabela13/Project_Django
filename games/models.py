@@ -12,8 +12,10 @@ class GameStatistics(models.Model):
     """ Średnia ocena i liczba ocen gier """
     vote_average = models.DecimalField(max_digits=3,
                                        decimal_places=1,
-                                       null=True)
-    vote_count = models.IntegerField(null=True, default=0)
+                                       null=True,
+                                       default=0)
+    vote_count = models.IntegerField(null=True,
+                                     default=0)
 
 
 class Country(models.Model):
@@ -35,6 +37,12 @@ class Genre(models.Model):
     genre = models.TextField(unique=True)
 
 
+# class GameGenre(models.Model):
+#     """ Gatunki gier """
+#     title = models.CharField(max_length=1000)
+#     genre = models.ManyToManyField(Genre)
+
+
 class Game(models.Model):
     """ Gry """
     title = models.CharField(max_length=1000)
@@ -53,15 +61,8 @@ class Game(models.Model):
                                  null=True,
                                  on_delete=models.SET_NULL,
                                  default='null')
-    genres = models.TextField(null=True)
+    genres = models.ManyToManyField(Genre)
 
     def __str__(self) -> str:
         return f'Nazwa gry: {self.title}'
 
-
-class GamesGenres(models.Model):
-    """ Połączenie gier i ich gatunków """
-    game_id = models.CharField(max_length=10)
-    title = models.CharField(max_length=1000)
-    genre_id = models.CharField(max_length=3)
-    genre = models.TextField()
