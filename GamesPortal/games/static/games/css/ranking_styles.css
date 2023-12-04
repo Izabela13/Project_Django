@@ -1,0 +1,77 @@
+/* Wygląd tabeli */
+
+thead {
+    font-family: 'Times New Roman', serif;
+    font-size: 16pt;
+    text-align: left;
+}
+
+
+tbody {
+    font-family: 'Times New Roman', serif;
+    font-size: 14pt;
+    text-align: left;
+}
+
+
+#the_longest_line {
+    width: 300px;
+}
+
+
+#first_line {
+    width: 100px;
+}
+
+
+#the_shortest_line {
+    width: 90px;
+}
+
+
+
+/* Wygląd odnośnika */
+a {
+    color: inherit;
+    font-family: 'Times New Roman', serif;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightslategrey;
+    text-decoration: none;
+    font-family: 'Times New Roman', serif;
+    font-size: 12px;
+}
+
+a:visited {
+    color: floralwhite;
+    text-decoration: none;
+}
+
+
+
+/* Kolory dla pierwszych 3-ech miejsc */
+.gold {color: gold;}
+.silver {color: slategrey;}
+.bronze {color: saddlebrown;}
+
+
+
+/* Kolory średniej */
+.topmost {color: darkgreen;}
+.top {color: lawngreen;}
+
+
+
+/* Kolory liczby głosów */
+.col1 {color: #B3E5FC;}
+.col2 {color: #81D4FA;}
+.col3 {color: #4FC3F7;}
+.col4 {color: #29B6F6;}
+.col5 {color: #03A9F4;}
+.col6 {color: #039BE5;}
+.col7 {color: #0288D1;}
+.col8 {color: #0277BD;}
+.col9 {color: #01579B;}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block page_title %}
+	Ranking gier
+{% endblock %}
+
+
+{% block page_content %}
+<link rel="stylesheet" href="{% static 'games/css/ranking_styles.css' %}">
+
+        <table>
+            <thead class="thead_font">
+                <tr>
+                    <th id="first_line"> Miejsce </th>
+                    <th id="the_longest_line"> Tytuł gry </th>
+                    <th id="the_shortest_line"> Średnia ocena </th>
+                    <th id="the_shortest_line"> Liczba głosów </th>
+                    <th> Dowiedz się więcej </th>
+                </tr>
+        </thead>
+
+            <tbody>
+            {% for game in the_best_games %}
+                <tr>
+                    <td class="{% if forloop.counter == 1 %} gold
+                                {% elif forloop.counter == 2%} silver
+                                {% elif forloop.counter == 3 %} bronze
+                                {% endif %} ">
+                        <b> {{ forloop.counter }} </b>
+                    </td>
+
+                    <td> {{ game.title }} </td>
+
+                    <td class="{% if game.statistics.vote_average >= 8.6 %} topmost {% else %} top {% endif %}">
+                        {{ game.statistics.vote_average }}
+                    </td>
+
+                    <td class="{% if game.statistics.vote_count <= 99 %} col1
+                               {% elif game.statistics.vote_count <= 499 %} col2
+                               {% elif game.statistics.vote_count <= 999 %} col3
+                               {% elif game.statistics.vote_count <= 1499 %} col4
+                               {% elif game.statistics.vote_count <= 9999 %} col6
+                               {% elif game.statistics.vote_count <= 19999 %} col7
+                               {% elif game.statistics.vote_count <= 49999 %} col8
+                               {% else %} col9
+                               {% endif %}">
+                        {{ game.statistics.vote_count }}
+                    </td>
+
+                    <td>
+                        <a href="{% url 'game_details' id=game.id %}"> &rArr; SPRAWDŹ SZCZEGÓŁY </a>
+                    </td>
+            {% endfor %}
+            </tbody>
+
+        </table>
+
+{% endblock %}

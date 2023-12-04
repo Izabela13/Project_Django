@@ -1,0 +1,71 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> {% block page_title %} {% endblock %} </title>
+
+    <link rel="shorcut icon" href="{% static 'images/favicon.jpg' %}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'css/general_settings.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reg_log_style.css' %}">
+</head>
+
+
+<body class="page container">
+
+{# GŁÓWNY POJEMNIK #}
+<div>
+
+
+    {# ELEMENT BLOKOWY NA ELEMENTY LOGOWANIA I REJESTROWANIA #}
+    <div>
+        <div class="menu_row">
+
+            <p> <b> WELCOME TO THE GAMES </b> </p>
+
+            <div class="auth">
+
+                {% if user.is_authenticated %}
+                	<div class="authenticated"> &bigstar; {{ user.get_username }} &bigstar; </div>
+                    {% include 'register_button.html' with icon='images/key.png' name='wyloguj' url_name='logout' %}
+                {% else %}
+                    {% include 'register_button.html' with icon='images/key.png' name='zaloguj' url_name='logging' %}
+                    {% include 'register_button.html' with icon='images/signin.png' name='zarejestruj' url_name='register' %}
+                {% endif %}
+
+            </div>
+
+        </div>
+    </div>
+
+
+    {# ELEMENT BLOKOWY ZAWARTOŚCI STRONY #}
+    <div class="content">
+
+        {# ELEMENT BLOKOWY MENU BOCZNEGO #}
+        <div class="menu-nav container">
+        {# miejsce na przyciski#}
+
+            {% include 'nav_button.html' with icon='images/home.png' name='home' url_name='start_page' %}
+            {% include 'nav_button.html' with icon='images/gaming.png' name='gry' url_name='all_games' %}
+            {% include 'nav_button.html' with icon='images/searching.png' name='znajdź' url_name='search_game' %}
+            {% include 'nav_button.html' with icon='images/ranking.png' name='topka' url_name='the_best' %}
+
+        </div>
+
+        <div class="general_displayed">
+            {% block page_content %} {% endblock %}
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

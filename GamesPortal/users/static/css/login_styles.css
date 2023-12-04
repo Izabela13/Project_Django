@@ -1,0 +1,95 @@
+/* Części formularza */
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+label {
+    display: inline-flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 400px;
+    font-size: 13pt;
+}
+
+
+input {
+        width: 100%;
+    }
+
+
+
+/* Przesyłanie danych */
+
+.transferring {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 0;
+    height: 50px;
+}
+
+
+.transfer_button {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    font:inherit;
+    font-size: 13pt;
+    font-weight: normal;
+    color: black;
+    border: solid whitesmoke;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+    transition-property:font-size, font-weight, background-color, border-color
+}
+
+
+.transfer_button:hover {
+    background-color: darkgray;
+    font-size: 11pt;
+    font-weight: bold;
+    color: inherit;
+}
+
+
+a.clean_link {
+    color: black;
+    font-family: 'Times New Roman', serif;
+    font-size: 13pt;
+    text-decoration: none;
+}
+
+a.clean_link:hover {
+    color: white;
+    text-decoration: none;
+    font-family: 'Times New Roman', serif;
+    font-size: 11pt;
+}
+
+a.clean_link:visited {
+    color: floralwhite;
+    text-decoration: none;
+}
+
+
+
+/* Komunikaty */
+
+.login_feedback {
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', serif;
+    font-size: 13pt;
+    font-weight: bold;
+    margin-top: 10px;
+}

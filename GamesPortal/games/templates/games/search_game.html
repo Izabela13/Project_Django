@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block page_title %}
+	Wyszukiwanie gier
+{% endblock %}
+
+
+{% block page_content %}
+<link rel="stylesheet" href="{% static 'games/css/search_game_styles.css' %}">
+
+    <form method="get" action="{% url 'search_game' %}">
+
+            <div class="centred_elements">
+                {{ form.search_query.label_tag }}
+                {{ form.search_query }}
+                <button type="submit" class="search_button"> Szukaj </button>
+            </div>
+
+    </form>
+
+    {% if form.search_query.value and result %}
+    	<ul>
+            {% for game in result %}
+                <li>
+                    <span> {{ game.title }} </span>
+                    <a href="{% url 'game_details' id=game.id %}"> <pre> &rArr; SPRAWDŹ SZCZEGÓŁY </pre></a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% elif form.search_query.value %}
+        <p> Nie znaleziono :'( . </p>
+    {% endif %}
+
+{% endblock %}

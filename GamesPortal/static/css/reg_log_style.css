@@ -1,0 +1,42 @@
+/* Guziki logowania i rejestracji */
+
+.reg_log_button {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    margin: 5px;
+    font:inherit;
+    font-size: 13pt;
+    font-weight: normal;
+    color: black;
+    text-orientation: inherit;
+    white-space: nowrap;
+    border: solid black;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+    transition-property:font-size, font-weight, background-color, border-color
+}
+
+
+.reg_log_button img {
+    margin-right: 5px;
+}
+
+
+.reg_log_button:hover {
+    background-color: darkgray;
+    font-size: 11pt;
+    font-weight: bold;
+    color: inherit;
+}
+
+
+#row_a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+}

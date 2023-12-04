@@ -1,0 +1,112 @@
+/* Wygląd tabeli */
+table {
+    width: 800px;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    border-color: whitesmoke;
+    margin-top: 20px;
+}
+
+
+th, td {
+    width: 800px;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    padding: 10px;
+}
+
+
+#shorter_tb_line {
+    width: 400px;
+}
+
+
+
+/* Ustawienie elementów na stronie */
+.content_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.table_container {
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+
+.description {
+    flex: fit-content;
+    width: 800px;
+    text-align: justify;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-right: 15px;
+}
+
+
+
+/* Ustawienie czcionki */
+.title_font {
+    font-family: 'Times New Roman', serif;
+    font-size: 20pt;
+}
+
+.table_font {
+    font-family: 'Times New Roman', serif;
+    font-size: 14pt;
+}
+
+.general_font {
+    font-family: 'Times New Roman', serif;
+    font-size: 13pt;
+}
+
+
+
+/* Przyciski i przejścia */
+.switch_back {
+    margin-bottom: 20px;
+}
+
+.a_back {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+
+.switch_prev_next {
+    margin-top: 20px;
+}
+
+
+.switch_space {
+    display: inline-block;
+    width: 100px;
+}
+
+
+a {
+    color: inherit;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+a:hover {
+    color: lightslategrey;
+    text-decoration: none;
+    font-family: 'Times New Roman', serif;
+    font-size: 14px;
+}
+
+a:visited {
+    color: floralwhite;
+    text-decoration: none;
+}

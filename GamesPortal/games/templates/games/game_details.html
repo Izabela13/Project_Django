@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block page_title %}
+	Szczegóły gry
+{% endblock %}
+
+
+{% block page_content %}
+<link rel="stylesheet" href="{% static 'games/css/game_details_styles.css' %}">
+
+    {% if game_details %}
+
+        <div class="switch_back">
+            <span class="a_back">
+                <a href="{% url 'all_games' %}?page={{ paginator_page }}"> &curvearrowleft; przejdź do wszystkich gier </a>
+            </span>
+        </div>
+
+
+        {# Tytuł gry #}
+        <div class="title_font">
+            <b> {{ game_details.title }} </b>
+        </div>
+
+
+        {# Szczegóły gry #}
+        <div class="content_wrapper">
+
+            {# Tabela z cyklem, datą premiery światowej, producentem, krajem powstania i gatunkami #}
+            <div class="table_container">
+                <table class="table_font">
+                    <thead>
+                        <tr>
+                            <th id="shorter_tb_line">  </th> {# Kolumna dla nazw kategorii #}
+                            <th>  </th> {# Kolumna dla szczegółów gry #}
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td id="shorter_tb_line"> Cykl: </td>
+                            <td> {{ game_details.cycle | default_if_none:"-" }} </td>
+                        </tr>
+
+                        <tr>
+                            <td id="shorter_tb_line"> Data premiery światowej: </td>
+                            <td> {{ game_details.release_date | date:"d.m.Y" }} </td>
+                        </tr>
+
+                        <tr>
+                            <td id="shorter_tb_line"> Producent: </td>
+                            <td> {{ game_details.producer.producer }} </td>
+                        </tr>
+
+                        <tr>
+                            <td id="shorter_tb_line"> Kraj powstania gry: </td>
+                            <td> {{ game_details.country.country }} </td>
+                        </tr>
+
+                        <tr>
+                            <td id="shorter_tb_line"> Gra z gatunku: </td>
+                            <td>
+                                {% for genre in game_details.genres.all %}
+                                    {{ genre.genre }}
+                                    {% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            {# Opis/ fabuła gry #}
+            <div class="description general_font">
+                {{ game_details.depiction }}
+            </div>
+
+            {# Statystki gry #}
+            <div class="rating general_font">
+                <div> Średnia ocena: <br>
+                    {% if game_details.statistics.vote_average >= 8.6 %}
+                        <span style="color: darkgreen"><b> {{ game_details.statistics.vote_average | floatformat:1 }} / 10 </b></span>
+                    {% elif game_details.statistics.vote_average >= 7.1%}
+                        <span style="color: lawngreen"><b> {{ game_details.statistics.vote_average | floatformat:1 }} / 10</b></span>
+                    {% elif game_details.statistics.vote_average >= 5.6%}
+                        <span style="color: yellow"><b> {{ game_details.statistics.vote_average | floatformat:1 }} / 10</b></span>
+                    {% elif game_details.statistics.vote_average >= 4.1%}
+                        <span style="color: orange"><b> {{ game_details.statistics.vote_average | floatformat:1 }} / 10</b></span>
+                    {% elif game_details.statistics.vote_average >= 2.6%}
+                        <span style="color: red"><b> {{ game_details.statistics.vote_average | floatformat:1 }} / 10</b></span>
+                    {% else %}
+                        <span style="color: darkred"><b> {{ game_details.statistics.vote_average | floatformat:1 }} / 10</b></span>
+                    {% endif %}
+                </div>
+
+                <div> Liczba ocen: <br>
+                    {% if game_details.statistics.vote_count <= 99 %}
+                	    <span style="color: #B3E5FC"><b> {{ game_details.statistics.vote_count }} </b></span>
+                    {% elif game_details.statistics.vote_count <= 499 %}
+                        <span style="color: #81D4FA"><b> {{ game_details.statistics.vote_count }} </b></span>
+                    {% elif game_details.statistics.vote_count <= 999 %}
+                        <span style="color: #4FC3F7"><b> {{ game_details.statistics.vote_count }} </b></span>
+                    {% elif game_details.statistics.vote_count <= 1499 %}
+                        <span style="color: #29B6F6"><b> {{ game_details.statistics.vote_count }} </b></span>
+                    {% elif game_details.statistics.vote_count <= 4999 %}
+                        <span style="color: #03A9F4"><b> {{ game_details.statistics.vote_count }} </b></span>
+                    {% elif game_details.statistics.vote_count <= 9999 %}
+                        <span style="color: #039BE5"><b> {{ game_details.statistics.vote_count }} </b></span>
+                    {% elif game_details.statistics.vote_count <= 19999 %}
+                        <span style="color: #0288D1"><b> {{ game_details.statistics.vote_count }} </b></span>
+                    {% elif game_details.statistics.vote_count <= 49999 %}
+                        <span style="color: #0277BD"><b> {{ game_details.statistics.vote_count }} </b></span>
+                    {% else %}
+                        <span style="color: #01579B"><b>{{ game_details.statistics.vote_count }} </b></span>
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="switch_prev_next">
+            <span class="switch_link">
+                {% if prev_game %}
+                    <a href="{% url 'game_details' id=prev_game.id %}"> &lArr; poprzednia </a>
+                {% endif %}
+            </span>
+            <span class="switch_space"> </span>
+            <span class="switch_link">
+                {% if next_game %}
+                    <a href="{% url 'game_details' id=next_game.id %}"> następna &rArr; </a>
+                {% endif %}
+            </span>
+        </div>
+
+    {% else %}
+        {% url 'games_not_found' %}
+    {% endif %}
+
+{% endblock %}

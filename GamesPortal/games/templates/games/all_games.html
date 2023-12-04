@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block page_title %}
+	Lista dostępnych gier
+{% endblock %}
+
+
+{% block page_content %}
+<link rel="stylesheet" href="{% static 'games/css/all_games_styles.css' %}">
+
+    <div class="uk-container">
+
+        <table>
+            <thead class="thead_font">
+                <tr>
+                    <th> TYTUŁ GRY </th>
+                    <th> CYKL </th>
+                    <th id="shorter_tb_line"> ŚREDNIA OCENA </th>
+                    <th id="shorter_tb_line"> </th>
+                </tr>
+            </thead>
+
+            <tbody class="tbody_font">
+            {% for game in all_games_list %}
+            	<tr>
+                    <td> {{ game.title }} </td>
+                    <td> {{ game.cycle }} </td>
+                    <td id="shorter_tb_line"> {{ game.statistics.vote_average }} </td>
+                    <td id="shorter_tb_line">
+                        <button class="details_button" type="button">
+                            <a href="{% url 'game_details' id=game.id %}?page={{ all_games_list.number }}"> Zobacz szczegóły </a>
+                        </button> </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+
+        <div class="paginator">
+            <span class="step_links">
+                {% if all_games_list.has_previous %}
+                	<a class="pagin_link" href="?page=1"> &laquo; pierwsza </a>
+                    <a class="pagin_link" href="?page={{ all_games_list.previous_page_number }}"> poprzednia </a>
+                {% endif %}
+
+                <span class="current">
+                    Strona {{ all_games_list.number }} z {{ all_games_list.paginator.num_pages }}.
+                </span>
+
+                {% if all_games_list.has_next %}
+                    <a class="pagin_link" href="?page={{ all_games_list.next_page_number }}"> następna </a>
+                    <a class="pagin_link" href="?page={{ all_games_list.paginator.num_pages }}"> ostatnia &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+
+    </div>
+
+{% endblock %}

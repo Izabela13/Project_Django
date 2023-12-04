@@ -1,0 +1,131 @@
+/* Ustawienia całej strony */
+
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+.page {
+    background-color: black;
+    color: ghostwhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding-top: 55px;
+    margin-left: 150px;
+    height: calc(100vh - 55px);
+}
+
+
+
+/* Menu wierszowe i menu nawigacyjne */
+
+.menu_row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    margin-top: 0;
+    background-color: grey;
+    border: ridge;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*z-index: 1;*/
+}
+
+
+.menu-nav {
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    height: 100vh;
+    width: 150px;
+    background-color: grey;
+    border: ridge;
+    position: fixed;
+    top:53px;
+    left: 0;
+    bottom: 0;
+    /*z-index: 2;*/
+}
+
+
+
+/* Zawartość na stronie */
+
+.content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex: 1;
+}
+
+
+.general_displayed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Przycisk logowania i rejestracji */
+
+.auth {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+
+
+/* Po autentykacji */
+.authenticated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18pt;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    margin: 5px;
+}
+
+
+
+/* Dopasowanie wielkości wyświetlania */
+@media screen and (max-width: 600px) {
+    /* Styl dla ekranów o szerokości do 600px */
+    .container {
+        width: 70%;
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    /* Styl dla ekranów o szerokości od 601px do 768px */
+    .container {
+        width: 80%;
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styl dla ekranów o szerokości od 769px do 1024px */
+    .container {
+        width: 100%;
+        height: 100vh;
+    }
+}

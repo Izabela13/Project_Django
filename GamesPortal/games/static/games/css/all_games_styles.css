@@ -1,0 +1,102 @@
+/* Wygląd tabeli */
+table {
+    width: 900px;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    border-color: whitesmoke;
+    border-spacing: 0;
+}
+
+
+th, td {
+    /*width: 1100px;*/
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    padding: 10px;
+}
+
+
+#shorter_tb_line {
+    width: 100px;
+}
+
+
+
+/* Ustawienie paginatora */
+.paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px
+}
+
+
+.step_links {
+    text-align: center;
+}
+
+
+.step_links a {
+    margin: 0 5px;
+}
+
+
+.current {
+    margin: 0 10px;
+}
+
+
+.pagin_link:hover {
+    color: lightslategrey;
+}
+
+
+.pagin_link:visited {
+    color: floralwhite;
+}
+
+
+
+/* Ustawienie czcionki */
+.tbody_font {
+    font-family: 'Times New Roman', serif;
+    font-size: 14pt;
+}
+
+
+.thead_font {
+    font-family: 'Times New Roman', serif;
+    font-size: 18pt;
+    text-align: left;
+}
+
+
+
+/* Wygląd przycisków ze szczegółami */
+.details_button a {
+    margin:0; /* brak marginesów */
+    font:inherit;
+    font-size: 11pt;
+    font-weight: normal;
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 30px;
+    vertical-align: middle;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 150px;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+    transition-property:font-size, font-weight, background-color, border-color}
+
+.details_button:hover a {
+    background-color: darkgray;
+    font-size: 12pt;
+    font-weight: bold;
+    color: inherit;
+}

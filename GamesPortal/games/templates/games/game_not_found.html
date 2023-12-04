@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block page_title %}
+	Ups :(
+{% endblock %}
+
+
+{% block page_content %}
+<link rel="stylesheet" href="{% static 'games/css/game_not_found_styles.css' %}">
+
+    <div class="font_on_page"> <p> Nie odnaleziono zawartości :'( </p> </div>
+
+        <img src="{% static 'games/images/404.jpg'%}" width="400" height="300"/>
+
+    <div class="font_on_page"> <p> Wróć na poprzednią stronę lub na stronę główną. </p> </div>
+
+{% endblock %}
